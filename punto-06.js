@@ -10,6 +10,6 @@ function sentenceWithoutSpaces ( sentence ) {
     return accountant;
   }
 
-  let sentence = ( prompt('Escriba una oración'));
+  let sentence = ( prompt('Escriba su nombre completo'));
   let letterContent = sentenceWithoutSpaces ( sentence )
-  console.log (`La frase '${ sentence }' tiene ${ letterContent } letras sin contar los espacios`)
+  console.log (`Su nombre '${ sentence }' tiene ${ letterContent } caracteres sin contar los espacios`)

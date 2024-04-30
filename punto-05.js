@@ -4,7 +4,7 @@
  
 let operation;
 let result;
-
+let error;
 
 
 do {   
@@ -27,21 +27,31 @@ do {
             
             break;
         case "/":
-            if ( num2 !== 0 ) {
-                result = num1 / num2;
+            if ( num2 == 0 ) {
+                alert ( 'No se puede dividir entre 0' );
+                break;
             } 
-            else {
-                alert ( 'No se puede dividir entre 0' )
-            }
+                 
+                result = num1 / num2;
+            
             break;
                     
         default:
             alert ( "Opción inválida. Inténtalo nuevamente." );
             
     }
-    alert(`El resultado de ${num1} ${operation} ${num2} es ${result}`);
 
-} while (true);
+    if ( error ) { 
+        console.log ( error )
+    } 
+    else {
+        console.log (alert(`El resultado de ${num1} ${operation} ${num2} es ${result}`));
+    }
+    
+    
+    option = (prompt ('¿Desea realizar otra operación? S/N'))
+
+} while ( option.toLowerCase === 's');
 
   
 
