@@ -5,11 +5,11 @@ function randomGenerator ( ){
     return  Math.floor ( Math.random () * 10 + 1 ) ;
 
 }
-const randomNumber = randomGenerator ( );
-console.log ( randomNumber )
 
 function guess ( ){
-   
+    const randomNumber = randomGenerator ( );
+    console.log ( randomNumber );
+    
     
     let userNumber;
     let intentos = 0;
@@ -19,13 +19,13 @@ function guess ( ){
         userNumber = parseInt( prompt ('Adivina un número entre 1 y 10 ') );
         
         if ( userNumber < randomNumber ) { 
-            alert ( 'El número que ingresaste es muy bajo' )
+            console.log ( 'El número que ingresaste es muy bajo' )
         }
         else if ( userNumber > randomNumber ) {
-            alert ( 'El número que ingresaste es muy alto')
+            console.log ( 'El número que ingresaste es muy alto')
         }
     }
-    alert ( `Adivinaste el número en ${intentos} intentos` )
+    console.log ( `Adivinaste el número en ${intentos} intentos` )
 
 }
 

@@ -1,29 +1,19 @@
 //Escribe un programa que genere una lista aleatoria de numeros y elimine todos los pares.
-const cantidad = prompt ( 'Digita la cantidad de números deseada' )
-let numberList = []
-for ( let i = 0; i < cantidad; i++){ 
+let random;
+let randomList = [];
+let oddList = [];
 
-   let entero = Math.floor ( Math.random ( numberList ) * 10 ) ;
-   numberList.push ( entero );
-   
-}
+for( let i = 0; i < 10; i++ ) {
+    random = Math.round( Math.random() * 10 );       
+    randomList.push( random);
 
-
-console.log ( numberList  ) 
-
-let odd = [];
-let par = []; 
-let result = []
-
-for ( i= 0; i < numberList.length ; i++ ) {
-    if ( numberList [ i ] % 2 == 0 ) {
-        par.push ( numberList );
-    }
-    else {
-        odd.push ( numberList );
-    }
     
-
+    if( randomList[ i ] % 2 != 0 ) {
+        oddList.push(randomList[ i ] );      
+    }
 }
-console.log ( odd )
+
+console.log( randomList );
+console.log( oddList );
+
 
